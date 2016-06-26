@@ -1,0 +1,30 @@
+{
+  "name": "introduction",
+  "version": "1.0.0",
+  "description": "Introducing webpack",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/webpack/bin/webpack.js --progress --colors --watch --config webpack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gauravtiwari/explore-webpack.git"
+  },
+  "keywords": [
+    "Webpack",
+    "Module",
+    "Loader",
+    "Javascript"
+  ],
+  "author": "Gaurav Tiwari <gaurav@gauravtiwari.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauravtiwari/explore-webpack/issues"
+  },
+  "homepage": "https://github.com/gauravtiwari/explore-webpack#readme",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "webpack": "^1.13.1"
+  }
+}
