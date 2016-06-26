@@ -2,9 +2,10 @@
   "name": "introduction",
   "version": "1.0.0",
   "description": "Introducing webpack",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/webpack/bin/webpack.js --progress --colors --watch --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/gauravtiwari/explore-webpack/issues"
   },
-  "homepage": "https://github.com/gauravtiwari/explore-webpack#readme"
+  "homepage": "https://github.com/gauravtiwari/explore-webpack#readme",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "webpack": "^1.13.1"
+  }
 }
