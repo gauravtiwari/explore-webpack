@@ -1,22 +1,22 @@
 // Initialize plugins for webpack
-
 var config = require('./config.js');
 var webpack  = require('webpack');
-var devBuild = process.env.NODE_ENV !== 'production';
-var nodeEnv = devBuild ? 'development' : 'production';
+
+// Figure out the environment to produce correct builds
+var environment = require('./environment.js');
 
 // Define empty plugins array
 config.plugins = [
   // Access NODE_ENV env variable through process.env
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: JSON.stringify(nodeEnv),
+      NODE_ENV: JSON.stringify(environment.nodeEnv),
     },
   }),
 ];
 
-// Uglify build in production
-if (!devBuild) {
+// Push more plugins based on build environment
+if (environment.prod) {
   config.plugins.push(
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(true),
