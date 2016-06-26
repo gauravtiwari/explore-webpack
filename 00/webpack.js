@@ -2,7 +2,7 @@
 
 var config = {};
 
-// Main entry point
+// Main entry point a.k.a main file
 config.entry = './main.js';
 
 // Main output directory and file
