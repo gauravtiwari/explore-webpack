@@ -44,12 +44,31 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var $ = __webpack_require__(2);
+
 	// Require sub modules
-	__webpack_require__(2);
+	$(document).ready(function() {
+	  __webpack_require__(1);
+	  __webpack_require__(3);
+	});
 
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Setup basic jQuery dom alert
+	var $ = __webpack_require__(2);
+
+	$('.show-alert').click(function(event) {
+	  event.preventDefault();
+	  alert('You have clicked me');
+	  $(event.target).text('You have closed the alert box');
+	});
+
+
+/***/ },
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10092,18 +10111,23 @@
 
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// Setup basic jQuery dom alert
-	var $ = __webpack_require__(1);
+	var $ = __webpack_require__(2);
 
-	$(document).ready(function() {
-	  $('.show-alert').click(function(event) {
-	    event.preventDefault();
-	    alert('You have clicked me');
-	    $(event.target).text('You have closed the alert box');
-	  });
+	var counter = $('.counter');
+
+	$('.increment').click(function(event) {
+	  event.preventDefault();
+	  counter.text(parseInt(counter.text()) + 1);
+	});
+
+	$('.decrement').click(function(event) {
+	  event.preventDefault();
+	  if (counter.text() >= 1) {
+	    counter.text(parseInt(counter.text()) - 1);
+	  }
 	});
 
 

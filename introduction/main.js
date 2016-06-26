@@ -1,2 +1,7 @@
+var $ = require('jquery');
+
 // Require sub modules
-require('./click.js');
+$(document).ready(function() {
+  require('./alert.js');
+  require('./counter.js');
+});
