@@ -1,6 +1,6 @@
 var $ = require('jquery');
 
-// Require sub modules
+// Run sub modules on document.ready
 $(document).ready(function() {
   require('./alert.js');
   require('./counter.js');
