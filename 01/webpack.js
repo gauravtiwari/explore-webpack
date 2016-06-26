@@ -1,3 +1,8 @@
+/*
+  To generate production grade outputs
+  Feature: sourcemaps, minification, remove duplication
+*/
+
 var devBuild = process.env.NODE_ENV !== 'production';
 var nodeEnv = devBuild ? 'development' : 'production';
 var nodeExternals = require('webpack-node-externals');
@@ -18,7 +23,7 @@ config.entry = './main.js';
 // Main output directory and file
 config.output = {
   path: __dirname + '/dist',
-  filename: 'bundle.js'
+  filename: devBuild ? 'bundle.js' : 'bundle.min.js'
 };
 
 // SourceMap generation
@@ -37,10 +42,9 @@ config.plugins = [
 // Uglify build in production
 if (!devBuild) {
   config.plugins.push(
-    [
-      new webpack.optimize.OccurrenceOrderPlugin(true),
-      new webpack.optimize.UglifyJsPlugin({ /* can pass many options */ })
-    ]
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.UglifyJsPlugin({ /* can pass many options */ })
   );
 }
 
