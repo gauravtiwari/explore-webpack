@@ -1,0 +1,13 @@
+.counter {
+  font-size: 20px;
+}
+
+.counter .value {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.counter button {
+  margin-right: 5px;
+  font-size: 15px;
+}
