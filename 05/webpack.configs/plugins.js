@@ -6,9 +6,11 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 // Figure out the environment to produce correct builds
 var environment = require('./environment.js');
 
+var fileName = environment.prod ? 'bundle.min.css' : 'bundle.css';
+
 // Define empty plugins array
 config.plugins = [
-  new ExtractTextPlugin('bundle.css', { allChunks: true }),
+  new ExtractTextPlugin(fileName, { allChunks: true }),
   // Access NODE_ENV env variable through process.env
   new webpack.DefinePlugin({
     'process.env': {
