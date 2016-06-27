@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // No need to specify file extension, as we defined it in resolve config
-import { Alert } from './javascripts/alert';
-import { Counter } from './javascripts/counter';
+import { Alert } from './components/alert';
+import { Counter } from './components/counter';
 
 // Functional component, no events
 const Main = (props) => {

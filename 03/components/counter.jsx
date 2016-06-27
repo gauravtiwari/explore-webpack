@@ -30,13 +30,13 @@ export class Counter extends Component {
   render() {
     return (
       <div className='counter'>
-        <div class="value">
+        <div className="value">
           {this.state.counter}
         </div>
-        <button class="increment" onClick={this.incrementCounter}>
+        <button className="increment" onClick={this.incrementCounter}>
           +
         </button>
-        <button class="decrement" onClick={this.decrementCounter}>
+        <button className="decrement" onClick={this.decrementCounter}>
           -
         </button>
       </div>
