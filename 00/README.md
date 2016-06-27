@@ -7,7 +7,7 @@ Install node.js (either brew on mac or install from [https://nodejs.org/en/downl
 
 ### Running locally
 ```bash
-cd introduction
+cd 00
 npm install
 npm run start
 open main.html in your favorite browser

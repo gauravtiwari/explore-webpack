@@ -1,13 +1,13 @@
-# Introduction exercise
+# Part 02
 
-The most basic setup to use webpack in a front-end project as a module loader.
+Split Webpack config into multiple files.
 
 ### Deps
 Install node.js (either brew on mac or install from [https://nodejs.org/en/download/](https://nodejs.org/en/download/))
 
 ### Running locally
 ```bash
-cd introduction
+cd 02
 npm install
 npm run start
 npm run build # Build for production
